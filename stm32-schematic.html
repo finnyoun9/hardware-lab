@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>STM32F103C8T6 最小系统原理图</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0d1117;color:#c9d1d9;font-family:'JetBrains Mono',monospace;padding:24px}
+h1{font-size:18px;color:#58a6ff;margin-bottom:4px}
+.sub{font-size:12px;color:#8b949e;margin-bottom:20px}
+svg{background:#0d1117;border:1px solid #30363d;border-radius:8px;max-width:100%}
+.legend{margin-top:16px;font-size:11px;display:flex;gap:24px;flex-wrap:wrap}
+.leg-item{display:flex;align-items:center;gap:6px}
+.leg-swatch{width:12px;height:12px;border-radius:2px}
+</style>
+</head>
+<body>
+<h1>STM32F103C8T6 Minimal System</h1>
+<p class="sub">最小系统原理图 · 3.3V供电 · SWD调试 · 8MHz HSE + 32.768kHz LSE</p>
+<svg viewBox="0 0 1100 750" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#161b22" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+  <rect width="1100" height="750" fill="url(#grid)"/>
+  <!-- MCU -->
+  <g transform="translate(60,50)">
+    <rect x="0" y="0" width="180" height="440" rx="6" fill="#0d1117" stroke="#58a6ff" stroke-width="2"/>
+    <rect x="0" y="0" width="180" height="440" rx="6" fill="rgba(88,166,255,0.05)"/>
+    <text x="90" y="30" text-anchor="middle" fill="#58a6ff" font-size="13" font-weight="bold">STM32F103C8T6</text>
+    <text x="90" y="50" text-anchor="middle" fill="#8b949e" font-size="10">LQFP-48 · Cortex-M3 · 72MHz</text>
+    <line x1="20" y1="60" x2="160" y2="60" stroke="#30363d"/>
+    <g font-size="10" fill="#c9d1d9">
+      <text x="15" y="82" text-anchor="end">PB2/BOOT1</text><text x="18" y="82" fill="#8b949e" font-size="8">20</text>
+      <text x="15" y="106" text-anchor="end">PB10</text><text x="18" y="106" fill="#8b949e" font-size="8">21</text>
+      <text x="15" y="130" text-anchor="end">PB11</text><text x="18" y="130" fill="#8b949e" font-size="8">22</text>
+      <text x="15" y="154" text-anchor="end">VSS_1</text><text x="18" y="154" fill="#8b949e" font-size="8">23</text>
+      <text x="15" y="178" text-anchor="end">VDD_1</text><text x="18" y="178" fill="#8b949e" font-size="8">24</text>
+      <text x="15" y="202" text-anchor="end">PB12</text><text x="18" y="202" fill="#8b949e" font-size="8">25</text>
+      <text x="15" y="226" text-anchor="end">PB13</text><text x="18" y="226" fill="#8b949e" font-size="8">26</text>
+      <text x="15" y="250" text-anchor="end">PB14</text><text x="18" y="250" fill="#8b949e" font-size="8">27</text>
+      <text x="15" y="274" text-anchor="end">PB15</text><text x="18" y="274" fill="#8b949e" font-size="8">28</text>
+      <text x="15" y="320" text-anchor="end">PA8</text><text x="18" y="320" fill="#8b949e" font-size="8">29</text>
+      <text x="15" y="344" text-anchor="end">PA9/TX</text><text x="18" y="344" fill="#8b949e" font-size="8">30</text>
+      <text x="15" y="368" text-anchor="end">PA10/RX</text><text x="18" y="368" fill="#8b949e" font-size="8">31</text>
+      <text x="15" y="392" text-anchor="end">PA11</text><text x="18" y="392" fill="#8b949e" font-size="8">32</text>
+      <text x="15" y="416" text-anchor="end">PA12</text><text x="18" y="416" fill="#8b949e" font-size="8">33</text>
+      <text x="165" y="82">VDD_3</text><text x="175" y="82" fill="#8b949e" font-size="8"> 48</text>
+      <text x="165" y="106">VSS_3</text><text x="175" y="106" fill="#8b949e" font-size="8"> 47</text>
+      <text x="165" y="130">PB9</text><text x="175" y="130" fill="#8b949e" font-size="8"> 46</text>
+      <text x="165" y="154">PB8</text><text x="175" y="154" fill="#8b949e" font-size="8"> 45</text>
+      <text x="165" y="178">BOOT0</text><text x="175" y="178" fill="#8b949e" font-size="8"> 44</text>
+      <text x="165" y="202">PB7</text><text x="175" y="202" fill="#8b949e" font-size="8"> 43</text>
+      <text x="165" y="226">PB6</text><text x="175" y="226" fill="#8b949e" font-size="8"> 42</text>
+      <text x="165" y="250">PB5</text><text x="175" y="250" fill="#8b949e" font-size="8"> 41</text>
+      <text x="165" y="274">PB4</text><text x="175" y="274" fill="#8b949e" font-size="8"> 40</text>
+      <text x="165" y="298">PB3</text><text x="175" y="298" fill="#8b949e" font-size="8"> 39</text>
+      <text x="165" y="322">PA15</text><text x="175" y="322" fill="#8b949e" font-size="8"> 38</text>
+      <text x="165" y="346">PA14/SWCLK</text><text x="175" y="346" fill="#8b949e" font-size="8"> 37</text>
+      <text x="165" y="370">PA13/SWDIO</text><text x="175" y="370" fill="#8b949e" font-size="8"> 34</text>
+    </g>
+    <g font-size="10" fill="#c9d1d9">
+      <text x="30" y="50" text-anchor="middle">VBAT</text>
+      <text x="60" y="50" text-anchor="middle">PC13</text>
+      <text x="90" y="50" text-anchor="middle">PC14</text>
+      <text x="120" y="50" text-anchor="middle">PC15</text>
+      <text x="150" y="50" text-anchor="middle">OSC_IN</text>
+    </g>
+  </g>
+  <!-- Power -->
+  <g transform="translate(520,50)">
+    <text x="0" y="20" fill="#d73a49" font-size="14" font-weight="bold">⚡ 供电</text>
+    <rect x="10" y="40" width="160" height="60" rx="4" fill="#0d1117" stroke="#f0883e" stroke-width="2"/>
+    <text x="90" y="65" text-anchor="middle" fill="#f0883e" font-size="12" font-weight="bold">AMS1117-3.3</text>
+    <text x="90" y="82" text-anchor="middle" fill="#8b949e" font-size="10">LDO · 1A · 5V→3.3V</text>
+    <text x="0" y="130" fill="#c9d1d9" font-size="10">输入: 10µF + 100nF</text>
+    <text x="0" y="148" fill="#c9d1d9" font-size="10">输出: 22µF + 100nF×4</text>
+    <text x="0" y="166" fill="#8b949e" font-size="9">每VDD脚就近100nF去耦</text>
+  </g>
+  <!-- Clock -->
+  <g transform="translate(300,50)">
+    <text x="0" y="20" fill="#a371f7" font-size="14" font-weight="bold">⏱ 时钟</text>
+    <text x="0" y="45" fill="#c9d1d9" font-size="11">HSE: 8MHz + 2×22pF</text>
+    <rect x="40" y="52" width="60" height="22" rx="2" fill="none" stroke="#a371f7" stroke-width="1.5"/>
+    <text x="70" y="67" text-anchor="middle" fill="#c9d1d9" font-size="9">8.000</text>
+    <text x="0" y="95" fill="#c9d1d9" font-size="11">LSE: 32.768kHz + 2×10pF</text>
+    <rect x="40" y="102" width="60" height="22" rx="2" fill="none" stroke="#a371f7" stroke-width="1.5"/>
+    <text x="70" y="117" text-anchor="middle" fill="#c9d1d9" font-size="9">32.768k</text>
+  </g>
+  <!-- SWD + Reset + Boot -->
+  <g transform="translate(300,300)">
+    <text x="0" y="15" fill="#58a6ff" font-size="14" font-weight="bold">🔧 调试 &amp; 配置</text>
+    <rect x="10" y="30" width="200" height="65" rx="4" fill="none" stroke="#30363d"/>
+    <text x="110" y="48" text-anchor="middle" fill="#58a6ff" font-size="11" font-weight="bold">SWD (4线)</text>
+    <text x="20" y="66" fill="#c9d1d9" font-size="10">VCC · SWDIO(PA13) · SWCLK(PA14) · GND</text>
+    <text x="20" y="84" fill="#8b949e" font-size="9">推荐 ST-Link V2 / J-Link / DAPLink</text>
+    <rect x="10" y="105" width="200" height="65" rx="4" fill="none" stroke="#30363d"/>
+    <text x="110" y="123" text-anchor="middle" fill="#fb7185" font-size="11" font-weight="bold">RESET</text>
+    <text x="20" y="141" fill="#c9d1d9" font-size="10">NRST — 10kΩ上拉 + 100nF到GND + 按键</text>
+    <text x="20" y="159" fill="#8b949e" font-size="9">低电平复位</text>
+    <rect x="10" y="180" width="200" height="40" rx="4" fill="none" stroke="#30363d"/>
+    <text x="110" y="198" text-anchor="middle" fill="#f0883e" font-size="11" font-weight="bold">BOOT0 = GND (Flash启动)</text>
+    <text x="50" y="215" fill="#8b949e" font-size="9">BOOT1 = 任意 (已映射PB2)</text>
+  </g>
+  <!-- BOM -->
+  <g transform="translate(520,240)">
+    <rect x="0" y="0" width="260" height="110" rx="4" fill="none" stroke="#30363d"/>
+    <text x="130" y="20" text-anchor="middle" fill="#f0883e" font-size="11" font-weight="bold">BOM</text>
+    <g font-size="10" fill="#c9d1d9">
+      <text x="10" y="42">STM32F103C8T6 (LQFP-48)</text>
+      <text x="10" y="58">AMS1117-3.3V SOT-223</text>
+      <text x="10" y="74">8MHz + 32.768kHz 晶振</text>
+      <text x="10" y="90">USB转TTL (CH340G) 可选</text>
+    </g>
+  </g>
+</svg>
+<div class="legend">
+  <div class="leg-item"><div class="leg-swatch" style="background:#d73a49"></div>电源</div>
+  <div class="leg-item"><div class="leg-swatch" style="background:#a371f7"></div>时钟</div>
+  <div class="leg-item"><div class="leg-swatch" style="background:#58a6ff"></div>调试/信号</div>
+  <div class="leg-item"><div class="leg-swatch" style="background:#fb7185"></div>复位</div>
+  <div class="leg-item"><div class="leg-swatch" style="background:#f0883e"></div>器件</div>
+</div>
+</body>
+</html>
