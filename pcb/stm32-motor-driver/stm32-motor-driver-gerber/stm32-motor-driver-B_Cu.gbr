@@ -1,0 +1,28 @@
+%TF.GenerationSoftware,KiCad,Pcbnew,10.0.3*%
+%TF.CreationDate,2026-06-07T13:01:42+08:00*%
+%TF.ProjectId,stm32-motor-driver,73746d33-322d-46d6-9f74-6f722d647269,rev?*%
+%TF.SameCoordinates,Original*%
+%TF.FileFunction,Copper,L2,Bot*%
+%TF.FilePolarity,Positive*%
+%FSLAX46Y46*%
+G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
+G04 Created by KiCad (PCBNEW 10.0.3) date 2026-06-07 13:01:42*
+%MOMM*%
+%LPD*%
+G01*
+G04 APERTURE LIST*
+%TA.AperFunction,ViaPad*%
+%ADD10C,0.800000*%
+%TD*%
+G04 APERTURE END LIST*
+D10*
+%TO.N,GND*%
+X35000000Y-20000000D03*
+X25000000Y-26000000D03*
+X30000000Y-10000000D03*
+X42000000Y-20000000D03*
+X15000000Y-20000000D03*
+X8000000Y-15000000D03*
+X40000000Y-8000000D03*
+%TD*%
+M02*

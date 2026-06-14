@@ -1,0 +1,15 @@
+# KiCad
+*.kicad_prl
+*.kicad_pro-wal
+*-backups/
+*.zip
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# History
+.history/
